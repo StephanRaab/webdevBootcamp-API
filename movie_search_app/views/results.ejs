@@ -1,5 +1,18 @@
-<h1>Results Page</h1>
+<link rel="stylesheet" href="app.css">
+
+<h1>MOVIE SEARCH RESULTS</h1>
+
+<div class="container">
 
 <% data["Search"].forEach(function(movie) { %>
-   <li><%= movie["Title"] %></li>
+  <div class="movieWell">
+    <img src="<%= movie["Poster"] %>"/>
+    <li><%= movie["Title"] %> - <em><%= movie["Year"] %></em</li>
+  </div>
   <%  }) %>
+
+</div>
+
+<form action="/" method="GET">
+  <input id="newSearch" type="submit" value="New Search"/>
+</form>
